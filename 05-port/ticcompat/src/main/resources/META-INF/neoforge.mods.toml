@@ -1,0 +1,32 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "LGPL-3.0-only"
+issueTrackerURL = "https://github.com/gtverse/ticcompat/issues"
+
+[[mods]]
+modId = "tconstruct"
+version = "0.1.0"
+displayName = "TConstruct Legacy Compat"
+authors = "GTverse port"
+description = '''
+Legacy Connector 的 TiC 段：在 MC 1.21.1 / NeoForge 21.1.x 上重建 1.7.10 GTNH 用到的
+tconstruct 命名空间（126 个物品）。材料维度用 data component 承载，item id 与 1.7.10 保持一致，
+因此配方侧的引用不需要改写。
+
+与 Modern Foundry（modId=modernfoundry）共存：后者占 modernfoundry 命名空间，
+本模组占 tconstruct 命名空间，两者 id 不重叠。
+'''
+
+[[dependencies.tconstruct]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.tconstruct]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1]"
+ordering = "NONE"
+side = "BOTH"
